@@ -1,0 +1,57 @@
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgba(0, 0, 0, 0.4); /* Black see-through */
+  width: 92%;
+  transition: 1s ease;
+  opacity:0;
+  color: white;
+  padding: 80px;
+  text-align: center;
+}
+/* When you mouse over the container, fade in the overlay title */
+.product:hover .overlay {
+  opacity: 1;
+}
+.product {
+  margin-top: 40px;
+  margin-bottom: 40px
+}
+.but {
+  border-radius: 4px;
+  background-color: coral;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.but:hover span {
+  padding-right: 25px;
+}
+
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
